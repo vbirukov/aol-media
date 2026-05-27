@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru" data-theme="rastaman-light" data-skin="rastaman-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff8400" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Искусство Жизни" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="icon" href="./brand/aol-logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./brand/aol-logo.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Искусство Жизни — медиатека</title>
+    <meta
+      name="description"
+      content="Беседы, лекции о писаниях, медитации и практики — слушайте и смотрите в браузере или установите как приложение."
+    />
+    <meta property="og:site_name" content="Искусство Жизни" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Искусство Жизни — медиатека" />
+    <meta
+      property="og:description"
+      content="Беседы, лекции о писаниях, медитации и практики."
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      try {
+        document.documentElement.setAttribute("data-skin", "rastaman-light");
+        document.documentElement.setAttribute("data-theme", "rastaman-light");
+        localStorage.setItem("aol-media-skin-v1", "rastaman-light");
+        localStorage.setItem("aol-media-appearance-v1", "light");
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

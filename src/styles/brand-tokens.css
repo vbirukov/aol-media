@@ -1,0 +1,21 @@
+:root {
+  --aol-white: #ffffff;
+  --aol-orange: #ff8400;
+  --aol-orange-hover: #e67600;
+  --aol-steel: #2a3e4e;
+  --aol-bg-soft: #f7f6f3;
+  --aol-gray: #acaba8;
+  --aol-text: #1a1a1a;
+  --aol-text-muted: #6b6a67;
+
+  --aol-program-meditation: #7b54bf;
+  --aol-program-silence: #35b3e1;
+  --aol-program-yoga: #ff7b7c;
+  --aol-program-happiness: #ff8400;
+  --aol-program-yes: #4bbf05;
+
+  --aol-font-body: "CertaSans", system-ui, sans-serif;
+  --aol-font-script: "AolScript", "Segoe Script", cursive;
+  --aol-radius: 0.75rem;
+  --aol-shadow: 0 4px 24px rgba(42, 62, 78, 0.08);
+}

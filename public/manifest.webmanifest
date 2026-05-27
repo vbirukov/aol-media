@@ -1,0 +1,21 @@
+{
+  "name": "Искусство Жизни — медиатека",
+  "short_name": "Искусство Жизни",
+  "description": "Беседы, лекции, медитации и практики — PWA-медиатека",
+  "theme_color": "#ff8400",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "categories": ["education", "lifestyle"],
+  "orientation": "any",
+  "scope": "./",
+  "start_url": "./",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "brand/aol-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

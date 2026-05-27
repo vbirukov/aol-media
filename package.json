@@ -1,0 +1,32 @@
+{
+  "name": "aol-media",
+  "private": true,
+  "version": "0.1.0",
+  "description": "PWA-библиотека контента Искусства Жизни",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.13.24",
+    "@vbonline/player": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.3",
+    "vite": "^4.5.14"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "vitaliy biryukov",
+  "license": "ISC"
+}

@@ -1,0 +1,195 @@
+.hookah-smoke,
+.jaipur-clouds,
+.rasta-video-bg,
+.rasta-sun-light,
+[class*="moon-dub"] .hero::before,
+[data-skin="rastaman"] .hero::before,
+[data-skin="moon-dub"] .hero::before {
+  display: none !important;
+}
+
+:root,
+[data-theme="light"],
+[data-theme="rastaman-light"],
+[data-skin="rastaman-light"],
+[data-skin="rastaman"],
+[data-skin="jaipur"],
+[data-skin="moon-dub"] {
+  --bg: var(--aol-white);
+  --surface: var(--aol-white);
+  --surface-2: var(--aol-bg-soft);
+  --surface-offset: var(--aol-bg-soft);
+  --border: color-mix(in srgb, var(--aol-gray) 35%, white);
+  --divider: color-mix(in srgb, var(--aol-gray) 25%, white);
+  --text: var(--aol-text);
+  --text-muted: var(--aol-text-muted);
+  --text-faint: var(--aol-gray);
+  --text-inverse: var(--aol-white);
+  --primary: var(--aol-orange);
+  --primary-hover: var(--aol-orange-hover);
+  --primary-hi: #ff9933;
+  --glow-primary: 0 0 20px rgba(255, 132, 0, 0.25);
+  --font-display: var(--aol-font-script);
+  --font-body: var(--aol-font-body);
+  --shadow-sm: 0 1px 3px rgba(42, 62, 78, 0.06);
+  --shadow-md: var(--aol-shadow);
+  --shadow-lg: 0 12px 40px rgba(42, 62, 78, 0.12);
+}
+
+[data-theme="dark"],
+[data-skin="rastaman"],
+[data-skin="moon-dub"] {
+  --bg: var(--aol-white);
+  --surface: var(--aol-white);
+  --surface-2: var(--aol-bg-soft);
+  --text: var(--aol-text);
+  --text-muted: var(--aol-text-muted);
+}
+
+body {
+  font-family: var(--aol-font-body);
+  background: var(--aol-white);
+  color: var(--aol-text);
+}
+
+.sidebar {
+  --sidebar-bg-image: none;
+  background-color: var(--aol-bg-soft);
+  border-right-color: color-mix(in srgb, var(--aol-gray) 30%, white);
+}
+
+.sidebar .brand {
+  display: none;
+}
+
+.hero {
+  background: var(--aol-white) !important;
+  background-image: none !important;
+}
+
+.hero::before,
+.hero-stack {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+.hero-author-link {
+  font-family: var(--aol-font-script);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: var(--aol-text) !important;
+  text-shadow: none !important;
+}
+
+.hero-author-bio,
+.hero-compact-stats,
+.mini-text {
+  color: var(--aol-text-muted) !important;
+}
+
+.topbar {
+  background: var(--aol-white);
+  border-bottom: 1px solid color-mix(in srgb, var(--aol-gray) 25%, white);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.aol-topbar-logo {
+  justify-self: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.aol-topbar-logo .aol-brand-mark {
+  height: 1.75rem;
+}
+
+.aol-install-btn {
+  color: var(--aol-orange) !important;
+  font-weight: 500;
+}
+
+.aol-brand-mark {
+  height: 5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.primary,
+.icon-button.primary,
+.chip.btn-shimmer:hover {
+  background: var(--aol-orange) !important;
+  color: var(--aol-white) !important;
+}
+
+.ghost:hover,
+.theme-switcher__btn.is-active {
+  color: var(--aol-orange);
+}
+
+.media-kind-filter__btn.is-active,
+.pill--kind.is-active,
+.nav-item.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 12%, white);
+  color: var(--aol-orange);
+  border-color: color-mix(in srgb, var(--aol-orange) 35%, white);
+}
+
+.card-play,
+.player-transport .icon-button.primary {
+  background: var(--aol-orange) !important;
+}
+
+.player-bar,
+.video-player-bar {
+  background: var(--aol-white);
+  border-top: 1px solid color-mix(in srgb, var(--aol-gray) 25%, white);
+  box-shadow: 0 -4px 24px rgba(42, 62, 78, 0.06);
+}
+
+.card {
+  background: var(--aol-white);
+  border-color: color-mix(in srgb, var(--aol-gray) 25%, white);
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 40%, white);
+}
+
+.splash-screen {
+  background: var(--aol-white);
+  color: var(--aol-text);
+}
+
+.aol-script-heading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  font-family: var(--aol-font-script);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--aol-text);
+}
+
+.aol-script-heading__line {
+  display: block;
+  width: min(100%, 14rem);
+  height: auto;
+  color: var(--aol-orange);
+}
+
+.aol-hub-hero .aol-hub-hero__back {
+  color: var(--aol-steel);
+  font-weight: 500;
+}
+
+.aol-hub-hero .aol-hub-hero__back:hover {
+  color: var(--aol-orange);
+}

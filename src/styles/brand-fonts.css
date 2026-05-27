@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "CertaSans";
+  src:
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/105/h/99ad9f21c5d243bf11849185ba4f7307.woff")
+      format("woff"),
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/362/h/130b240a7efedd2a56bbb0c186b75eda.otf")
+      format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CertaSans";
+  src:
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/134/h/f711f13144dae86b1a143f73474bb26e.woff")
+      format("woff"),
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/135/h/452911e55da67ae159d2a4ac214ff270.otf")
+      format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "CertaSans";
+  src:
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/216/h/b25d426281daa31e9a2e12d12ff0bd17.woff")
+      format("woff"),
+    url("https://artofliving.ru/fileservice/file/download/a/14615/sc/339/h/accf5b775c9d0bfbbc46ab0229891e48.otf")
+      format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AolScript";
+  src:
+    url("https://artofliving.ru/fileservice/file/download/h/4706dc59765cae20cb9b49d60e56ec2f.woff/a/14615/sc/250")
+      format("woff"),
+    url("https://artofliving.ru/fileservice/file/download/h/8f955eadd9a5aba4b91cfc89953642da.otf/a/14615/sc/353")
+      format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
