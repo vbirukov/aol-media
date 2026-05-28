@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json",
     "catalog:generate": "node scripts/generate-catalog.mjs",
-    "catalog:generate:dry": "node scripts/generate-catalog.mjs --dry-run"
+    "catalog:generate:dry": "node scripts/generate-catalog.mjs --dry-run",
+    "media:transcode": "node scripts/transcode-media.mjs",
+    "media:transcode:dry": "node scripts/transcode-media.mjs --dry-run"
   },
   "dependencies": {
     "@tanstack/react-virtual": "^3.13.24",
