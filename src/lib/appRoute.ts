@@ -92,12 +92,12 @@ export function resolveHubCategoryFromUrl(): HubCategory | undefined {
   const album = params.get("album");
   if (!album) return undefined;
   for (const cat of HUB_CATEGORIES) {
-    if (!cat.section) continue;
-    const canonicalAlbum = folderShareSlug(
-      `/${cat.section}/${cat.section}`.replace(/\/+/g, "/"),
+    const candidateFolders = [cat.albumFolder, cat.section].filter(
+      (v): v is string => Boolean(v),
     );
-    const legacyAlbum = folderShareSlug(cat.section);
-    if (album === canonicalAlbum || album === legacyAlbum) return cat;
+    for (const folder of candidateFolders) {
+      if (album === folderShareSlug(folder)) return cat;
+    }
   }
   return undefined;
 }

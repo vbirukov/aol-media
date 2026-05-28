@@ -18,6 +18,7 @@ export type HubCategory = {
   accent: string;
   iconUrl?: string;
   section?: string;
+  albumFolder?: string;
   mediaKind?: MediaKind;
 };
 
@@ -30,6 +31,7 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#2a3e4e",
     iconUrl: "./icons/sections/talks.png",
     section: "Беседы",
+    albumFolder: "Беседы",
   },
   {
     id: "knowledge",
@@ -39,6 +41,7 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#ffc001",
     iconUrl: "./icons/sections/knowledge.png",
     section: "Серии знаний",
+    albumFolder: "Йога сутры Патанджали",
   },
   {
     id: "meditations",
@@ -67,6 +70,7 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#ff7b7c",
     iconUrl: "./icons/sections/bhajans.png",
     section: "Баджаны",
+    albumFolder: "Call of the Valley",
     mediaKind: "audio",
   },
   {
@@ -85,14 +89,10 @@ export function hubCategoryById(id: HubCategoryId): HubCategory | undefined {
   return HUB_CATEGORIES.find((c) => c.id === id);
 }
 
-function categoryAlbumPath(section: string): string {
-  return `/${section}/${section}`.replace(/\/+/g, "/");
-}
-
 export function buildLibrarySearch(category: HubCategory): string {
   const params = new URLSearchParams();
-  if (category.section) {
-    params.set("album", folderShareSlug(categoryAlbumPath(category.section)));
+  if (category.albumFolder) {
+    params.set("album", folderShareSlug(category.albumFolder));
   }
   if (category.mediaKind && category.mediaKind !== "audio") {
     params.set("kind", category.mediaKind);
