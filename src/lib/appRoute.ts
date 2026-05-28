@@ -92,7 +92,12 @@ export function resolveHubCategoryFromUrl(): HubCategory | undefined {
   const album = params.get("album");
   if (!album) return undefined;
   for (const cat of HUB_CATEGORIES) {
-    if (cat.section && folderShareSlug(cat.section) === album) return cat;
+    if (!cat.section) continue;
+    const canonicalAlbum = folderShareSlug(
+      `/${cat.section}/${cat.section}`.replace(/\/+/g, "/"),
+    );
+    const legacyAlbum = folderShareSlug(cat.section);
+    if (album === canonicalAlbum || album === legacyAlbum) return cat;
   }
   return undefined;
 }

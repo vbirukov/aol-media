@@ -85,10 +85,14 @@ export function hubCategoryById(id: HubCategoryId): HubCategory | undefined {
   return HUB_CATEGORIES.find((c) => c.id === id);
 }
 
+function categoryAlbumPath(section: string): string {
+  return `/${section}/${section}`.replace(/\/+/g, "/");
+}
+
 export function buildLibrarySearch(category: HubCategory): string {
   const params = new URLSearchParams();
   if (category.section) {
-    params.set("album", folderShareSlug(category.section));
+    params.set("album", folderShareSlug(categoryAlbumPath(category.section)));
   }
   if (category.mediaKind && category.mediaKind !== "audio") {
     params.set("kind", category.mediaKind);
