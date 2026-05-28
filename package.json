@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@tanstack/react-virtual": "^3.13.24",
-    "@vbonline/player": "^0.3.3",
+    "@vbonline/player": "^0.3.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
