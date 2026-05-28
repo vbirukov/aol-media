@@ -56,6 +56,7 @@ jobs:
             dist/ "$SSH_USER@$SSH_HOST:$DEPLOY_PATH/releases/$RELEASE/"
 
           ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" "
+            rm -rf $DEPLOY_PATH/current &&
             ln -sfn $DEPLOY_PATH/releases/$RELEASE $DEPLOY_PATH/current &&
             sudo systemctl reload nginx
           "
