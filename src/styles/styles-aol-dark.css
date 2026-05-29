@@ -32,9 +32,20 @@
   color: var(--text);
 }
 
-[data-skin="aol-dark"] .aol-brand-mark,
-[data-theme="dark"] .aol-brand-mark {
-  filter: brightness(0) invert(1);
+.aol-brand-mark--dark {
+  height: auto;
+  max-height: 2.75rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.aol-welcome__logo.aol-brand-mark--dark {
+  max-height: none;
+  width: min(240px, 78vw);
+}
+
+.aol-topbar-logo .aol-brand-mark--dark {
+  max-height: 2.25rem;
 }
 
 [data-skin="aol-dark"] .sidebar,
@@ -135,11 +146,6 @@
 
 [data-skin="aol-dark"] .library-feed-bg,
 [data-theme="dark"] .library-feed-bg {
-  background: var(--aol-dark-bg);
-}
-
-[data-skin="aol-dark"] .library-feed-bg::after,
-[data-theme="dark"] .library-feed-bg::after {
   background:
     radial-gradient(
       ellipse 70% 45% at 12% 0%,
@@ -150,7 +156,24 @@
       ellipse 50% 40% at 88% 100%,
       color-mix(in srgb, var(--aol-orange) 12%, transparent),
       transparent 58%
+    ),
+    linear-gradient(
+      180deg,
+      var(--aol-dark-bg) 0%,
+      color-mix(in srgb, var(--aol-dark-surface) 85%, var(--aol-dark-bg)) 100%
     );
+}
+
+[data-skin="aol-dark"] .library-feed-bg::after,
+[data-theme="dark"] .library-feed-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--aol-grain);
+  background-size: 200px 200px;
+  opacity: 0.04;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 [data-skin="aol-dark"] .modal-card,

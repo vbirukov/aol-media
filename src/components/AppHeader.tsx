@@ -33,7 +33,7 @@ export function AppHeader({
         onClick={navigateToWelcome}
         aria-label="На главную"
       >
-        <BrandLogo />
+        <BrandLogo skin={skin} />
       </button>
       <div className="toolbar topbar-toolbar">
         <AppearanceToggle skin={skin} onSkinChange={onSkinChange} />

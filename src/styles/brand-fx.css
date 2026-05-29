@@ -380,7 +380,7 @@
 
 /* ── Library: ambient feed (light AOL) ── */
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .library-feed-bg {
   background:
     radial-gradient(
@@ -396,7 +396,7 @@
     linear-gradient(180deg, var(--aol-white) 0%, var(--aol-bg-soft) 100%);
 }
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .library-feed-bg::after {
   content: "";
   position: absolute;
@@ -504,7 +504,7 @@
 
 /* ── Track cards: soft lift ── */
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .card {
   transition:
     border-color 0.32s var(--aol-ease-out),
@@ -512,7 +512,7 @@
     transform 0.38s var(--aol-ease-out);
 }
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .card:hover {
   transform: translateY(-2px);
   box-shadow:
@@ -520,7 +520,7 @@
     var(--shadow-sm);
 }
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .card.is-active {
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--aol-orange) 28%, transparent),
@@ -529,9 +529,9 @@
 
 /* ── Player bar glow line ── */
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .player-bar::before,
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .video-player-bar::before {
   content: "";
   position: absolute;
@@ -549,9 +549,9 @@
   pointer-events: none;
 }
 
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .player-bar,
-:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+:is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
   .video-player-bar {
   position: relative;
 }
@@ -628,13 +628,13 @@
   .aol-appearance-toggle,
   .aol-hub-hero__back,
   .folder-card::before,
-  :root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  :is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
     .card {
     transition-duration: 0.01ms;
   }
 
   .aol-welcome__card:hover,
-  :root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  :is([data-skin="rastaman-light"], [data-theme="rastaman-light"])
     .card:hover {
     transform: none;
   }
