@@ -215,24 +215,6 @@
   color: var(--aol-dark-text);
 }
 
-[data-skin="aol-dark"] .aol-welcome__card,
-[data-theme="dark"] .aol-welcome__card {
-  background: var(--aol-dark-surface-2);
-  border-color: var(--aol-dark-border);
-}
-
-[data-skin="aol-dark"] .aol-welcome__card:hover,
-[data-theme="dark"] .aol-welcome__card:hover {
-  background: var(--aol-dark-elevated);
-  border-color: color-mix(in srgb, var(--card-accent, var(--aol-orange)) 50%, var(--aol-dark-bg));
-  box-shadow: var(--shadow-md);
-}
-
-[data-skin="aol-dark"] .aol-welcome__card-title,
-[data-theme="dark"] .aol-welcome__card-title {
-  color: var(--aol-dark-text);
-}
-
 [data-skin="aol-dark"] .aol-welcome__all,
 [data-theme="dark"] .aol-welcome__all {
   background: transparent;

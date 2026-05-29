@@ -92,32 +92,15 @@
 }
 
 .aol-welcome__card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: block;
   width: 100%;
-  padding: 1rem 1.125rem;
   text-align: left;
-  border-radius: var(--aol-radius);
-  border: 1px solid color-mix(in srgb, var(--aol-gray) 22%, white);
-  background: var(--aol-bg-soft);
   color: inherit;
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    border-color 0.18s ease,
-    background 0.18s ease;
+  cursor: pointer;
 }
 
-.aol-welcome__card:hover {
-  transform: translateY(-2px);
-  background: var(--aol-white);
-  border-color: color-mix(in srgb, var(--card-accent, var(--aol-orange)) 45%, white);
-  box-shadow: var(--aol-shadow);
-}
-
-.aol-welcome__card:active {
-  transform: translateY(0);
+.aol-welcome__card-shell {
+  text-align: left;
 }
 
 /* --- Бейдж: дефолты (переопределяются в [data-category] ниже) --- */
@@ -284,7 +267,6 @@
   flex-shrink: 0;
   font-size: 1.125rem;
   color: var(--card-accent, var(--aol-orange));
-  opacity: 0.85;
 }
 
 .aol-welcome__footer {
@@ -305,16 +287,6 @@
   color: var(--aol-orange);
   background: var(--aol-white);
   border: 2px solid var(--aol-orange);
-  transition:
-    background 0.15s ease,
-    color 0.15s ease,
-    transform 0.15s ease;
-}
-
-.aol-welcome__all:hover {
-  background: var(--aol-orange);
-  color: var(--aol-white);
-  transform: translateY(-1px);
 }
 
 .aol-welcome__note {

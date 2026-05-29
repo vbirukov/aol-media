@@ -1,0 +1,641 @@
+:root {
+  --aol-ease-out: cubic-bezier(0.32, 0.72, 0, 1);
+  --aol-ease-spring: cubic-bezier(0.17, 0.67, 0.19, 1.12);
+  --aol-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+}
+
+/* ── Welcome: ambient atmosphere ── */
+
+.aol-welcome__ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.aol-welcome__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.aol-welcome__orb--1 {
+  width: min(55vw, 28rem);
+  height: min(55vw, 28rem);
+  top: -8%;
+  right: -12%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--aol-orange) 42%, transparent),
+    transparent 68%
+  );
+  animation: aol-orb-drift-1 22s var(--aol-ease-out) infinite alternate;
+}
+
+.aol-welcome__orb--2 {
+  width: min(48vw, 22rem);
+  height: min(48vw, 22rem);
+  bottom: 6%;
+  left: -14%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--aol-steel) 28%, transparent),
+    transparent 70%
+  );
+  animation: aol-orb-drift-2 26s var(--aol-ease-out) infinite alternate;
+}
+
+.aol-welcome__grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.028;
+  background-image: var(--aol-grain);
+  background-size: 180px 180px;
+  mix-blend-mode: multiply;
+}
+
+[data-skin="aol-dark"] .aol-welcome__grain,
+[data-theme="dark"] .aol-welcome__grain {
+  opacity: 0.045;
+  mix-blend-mode: soft-light;
+}
+
+@keyframes aol-orb-drift-1 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-4vw, 3vh) scale(1.08);
+  }
+}
+
+@keyframes aol-orb-drift-2 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(5vw, -2vh) scale(1.06);
+  }
+}
+
+/* ── Welcome: entrance choreography ── */
+
+.aol-welcome__inner {
+  z-index: 1;
+}
+
+.aol-welcome__header {
+  animation: aol-fade-rise 0.9s var(--aol-ease-out) both;
+}
+
+.aol-welcome__logo {
+  animation: aol-logo-in 1.1s var(--aol-ease-out) 0.08s both;
+}
+
+.aol-welcome__title-wrap {
+  animation: aol-fade-rise 0.85s var(--aol-ease-out) 0.14s both;
+}
+
+.aol-welcome__eyebrow {
+  animation: aol-fade-rise 0.8s var(--aol-ease-out) 0.22s both;
+}
+
+.aol-welcome__lead {
+  animation: aol-fade-rise 0.8s var(--aol-ease-out) 0.3s both;
+}
+
+.aol-welcome__card {
+  animation: aol-card-in 0.72s var(--aol-ease-out) both;
+  animation-delay: calc(0.38s + var(--card-i, 0) * 0.07s);
+}
+
+.aol-welcome__footer {
+  animation: aol-fade-rise 0.75s var(--aol-ease-out) 0.82s both;
+}
+
+.aol-welcome__band {
+  animation: aol-fade-rise 0.7s var(--aol-ease-out) 0.92s both;
+}
+
+@keyframes aol-fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes aol-logo-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(0.75rem);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes aol-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ── Script heading: underline draw ── */
+
+.aol-script-heading__line path {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: aol-line-draw 1.4s var(--aol-ease-out) 0.45s both;
+}
+
+@keyframes aol-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Welcome cards: double-bezel + accent glow ── */
+
+.aol-welcome__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  transition:
+    transform 0.42s var(--aol-ease-out),
+    filter 0.42s var(--aol-ease-out);
+}
+
+.aol-welcome__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: calc(var(--aol-radius) + 2px);
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--card-accent, var(--aol-orange)) 18%, white),
+    color-mix(in srgb, var(--aol-gray) 14%, white)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.72;
+  transition: opacity 0.42s var(--aol-ease-out);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aol-welcome__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--aol-radius);
+  background: radial-gradient(
+    ellipse 80% 60% at 0% 50%,
+    color-mix(in srgb, var(--card-accent, var(--aol-orange)) 14%, transparent),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.45s var(--aol-ease-out);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aol-welcome__card-shell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.125rem;
+  border-radius: var(--aol-radius);
+  background: var(--aol-bg-soft);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.65),
+    0 1px 2px rgba(42, 62, 78, 0.04);
+  transition:
+    background 0.42s var(--aol-ease-out),
+    box-shadow 0.42s var(--aol-ease-out);
+}
+
+.aol-welcome__card:hover {
+  transform: translateY(-3px);
+  filter: none;
+}
+
+.aol-welcome__card:hover::before {
+  opacity: 1;
+}
+
+.aol-welcome__card:hover::after {
+  opacity: 1;
+}
+
+.aol-welcome__card:hover .aol-welcome__card-shell {
+  background: var(--aol-white);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 32px color-mix(in srgb, var(--card-accent, var(--aol-orange)) 12%, transparent),
+    0 2px 8px rgba(42, 62, 78, 0.06);
+}
+
+.aol-welcome__card:active {
+  transform: translateY(-1px) scale(0.995);
+  transition-duration: 0.12s;
+}
+
+.aol-welcome__card-badge {
+  transition: transform 0.45s var(--aol-ease-spring);
+}
+
+.aol-welcome__card:hover .aol-welcome__card-badge {
+  transform: scale(1.04);
+}
+
+.aol-welcome__card-arrow {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card-accent, var(--aol-orange)) 10%, transparent);
+  opacity: 1;
+  transition:
+    transform 0.42s var(--aol-ease-spring),
+    background 0.42s var(--aol-ease-out);
+}
+
+.aol-welcome__card:hover .aol-welcome__card-arrow {
+  transform: translate(2px, -2px);
+  background: color-mix(in srgb, var(--card-accent, var(--aol-orange)) 18%, transparent);
+}
+
+/* ── Welcome CTA ── */
+
+.aol-welcome__all {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow:
+    0 2px 12px color-mix(in srgb, var(--aol-orange) 18%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition:
+    background 0.38s var(--aol-ease-out),
+    color 0.38s var(--aol-ease-out),
+    transform 0.38s var(--aol-ease-spring),
+    box-shadow 0.38s var(--aol-ease-out);
+}
+
+.aol-welcome__all::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    105deg,
+    transparent 36%,
+    rgba(255, 255, 255, 0.32) 50%,
+    transparent 64%
+  );
+  background-size: 220% 100%;
+  animation: aol-btn-shimmer 4.2s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+.aol-welcome__all:hover {
+  background: var(--aol-orange);
+  color: var(--aol-white);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 28px color-mix(in srgb, var(--aol-orange) 32%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.aol-welcome__all:active {
+  transform: translateY(0) scale(0.98);
+}
+
+@keyframes aol-btn-shimmer {
+  0% {
+    background-position: 130% center;
+  }
+  100% {
+    background-position: -130% center;
+  }
+}
+
+/* ── Appearance toggle pill ── */
+
+.aol-appearance-toggle {
+  border: 1px solid color-mix(in srgb, var(--aol-gray) 28%, transparent);
+  background: color-mix(in srgb, var(--aol-white) 72%, transparent);
+  backdrop-filter: blur(12px);
+  transition:
+    color 0.32s var(--aol-ease-out),
+    border-color 0.32s var(--aol-ease-out),
+    background 0.32s var(--aol-ease-out),
+    transform 0.32s var(--aol-ease-spring),
+    box-shadow 0.32s var(--aol-ease-out);
+}
+
+.aol-appearance-toggle:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 35%, transparent);
+  box-shadow: 0 2px 12px color-mix(in srgb, var(--aol-orange) 12%, transparent);
+  transform: translateY(-1px);
+}
+
+[data-skin="aol-dark"] .aol-appearance-toggle,
+[data-theme="dark"] .aol-appearance-toggle {
+  background: color-mix(in srgb, var(--aol-dark-surface-2) 78%, transparent);
+  border-color: var(--aol-dark-border);
+}
+
+/* ── Library: ambient feed (light AOL) ── */
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .library-feed-bg {
+  background:
+    radial-gradient(
+      ellipse 65% 50% at 8% 12%,
+      color-mix(in srgb, var(--aol-steel) 14%, transparent),
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 55% 45% at 92% 78%,
+      color-mix(in srgb, var(--aol-orange) 10%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(180deg, var(--aol-white) 0%, var(--aol-bg-soft) 100%);
+}
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .library-feed-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--aol-grain);
+  background-size: 200px 200px;
+  opacity: 0.022;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* ── Hub hero accent ── */
+
+.aol-hub-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.aol-hub-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--aol-orange) 45%, transparent) 35%,
+    color-mix(in srgb, var(--aol-steel) 25%, transparent) 65%,
+    transparent
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.aol-hub-hero__back {
+  transition:
+    color 0.32s var(--aol-ease-out),
+    transform 0.32s var(--aol-ease-spring);
+}
+
+.aol-hub-hero__back:hover {
+  transform: translateX(-3px);
+}
+
+/* ── Topbar glass strip ── */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px) saturate(1.15);
+  background: color-mix(in srgb, var(--surface) 88%, transparent) !important;
+  transition: box-shadow 0.35s var(--aol-ease-out);
+}
+
+.topbar::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--aol-orange) 22%, var(--border)) 50%,
+    transparent
+  );
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* ── Folder cards: accent edge ── */
+
+.folder-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.folder-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 3px;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--aol-orange) 40%,
+    transparent
+  );
+  opacity: 0;
+  transform: scaleY(0.4);
+  transition:
+    opacity 0.38s var(--aol-ease-out),
+    transform 0.38s var(--aol-ease-spring);
+}
+
+.folder-card:hover::before {
+  opacity: 0.85;
+  transform: scaleY(1);
+}
+
+/* ── Track cards: soft lift ── */
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .card {
+  transition:
+    border-color 0.32s var(--aol-ease-out),
+    box-shadow 0.38s var(--aol-ease-out),
+    transform 0.38s var(--aol-ease-out);
+}
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 20px color-mix(in srgb, var(--aol-orange) 8%, transparent),
+    var(--shadow-sm);
+}
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .card.is-active {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--aol-orange) 28%, transparent),
+    0 6px 28px color-mix(in srgb, var(--aol-orange) 14%, transparent);
+}
+
+/* ── Player bar glow line ── */
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .player-bar::before,
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .video-player-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--aol-orange) 55%, transparent),
+    transparent
+  );
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .player-bar,
+:root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+  .video-player-bar {
+  position: relative;
+}
+
+/* ── Dark theme overrides ── */
+
+[data-skin="aol-dark"] .aol-welcome__card-shell,
+[data-theme="dark"] .aol-welcome__card-shell {
+  background: var(--aol-dark-surface-2);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card:hover .aol-welcome__card-shell,
+[data-theme="dark"] .aol-welcome__card:hover .aol-welcome__card-shell {
+  background: var(--aol-dark-elevated);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 8px 32px color-mix(in srgb, var(--card-accent, var(--aol-orange)) 16%, transparent),
+    0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card::before,
+[data-theme="dark"] .aol-welcome__card::before {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--card-accent, var(--aol-orange)) 28%, var(--aol-dark-bg)),
+    color-mix(in srgb, var(--aol-gray) 18%, var(--aol-dark-bg))
+  );
+}
+
+[data-skin="aol-dark"] .aol-welcome__all::after,
+[data-theme="dark"] .aol-welcome__all::after {
+  opacity: 0.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aol-welcome__orb,
+  .aol-welcome__header,
+  .aol-welcome__logo,
+  .aol-welcome__title-wrap,
+  .aol-welcome__eyebrow,
+  .aol-welcome__lead,
+  .aol-welcome__card,
+  .aol-welcome__footer,
+  .aol-welcome__band,
+  .aol-script-heading__line path,
+  .aol-welcome__all::after {
+    animation: none !important;
+  }
+
+  .aol-welcome__header,
+  .aol-welcome__logo,
+  .aol-welcome__title-wrap,
+  .aol-welcome__eyebrow,
+  .aol-welcome__lead,
+  .aol-welcome__card,
+  .aol-welcome__footer,
+  .aol-welcome__band {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .aol-script-heading__line path {
+    stroke-dashoffset: 0;
+  }
+
+  .aol-welcome__card,
+  .aol-welcome__card-badge,
+  .aol-welcome__card-arrow,
+  .aol-welcome__all,
+  .aol-appearance-toggle,
+  .aol-hub-hero__back,
+  .folder-card::before,
+  :root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+    .card {
+    transition-duration: 0.01ms;
+  }
+
+  .aol-welcome__card:hover,
+  :root:not([data-skin="rastaman"]):not([data-skin="moon-dub"]):not([data-skin="jaipur"]):not([data-skin="rastaman-light"])
+    .card:hover {
+    transform: none;
+  }
+}

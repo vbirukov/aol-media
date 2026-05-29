@@ -19,6 +19,11 @@ export function WelcomePage() {
 
   return (
     <div className="aol-welcome">
+      <div className="aol-welcome__ambient" aria-hidden>
+        <div className="aol-welcome__orb aol-welcome__orb--1" />
+        <div className="aol-welcome__orb aol-welcome__orb--2" />
+        <div className="aol-welcome__grain" />
+      </div>
       <div className="aol-welcome__inner">
         <header className="aol-welcome__header">
           <div className="aol-welcome__header-row">
@@ -36,28 +41,35 @@ export function WelcomePage() {
         </header>
 
         <nav className="aol-welcome__grid" aria-label="Разделы медиатеки">
-          {HUB_CATEGORIES.map((cat) => (
+          {HUB_CATEGORIES.map((cat, i) => (
             <button
               key={cat.id}
               type="button"
               className="aol-welcome__card"
-              style={{ "--card-accent": cat.accent } as CSSProperties}
+              style={
+                {
+                  "--card-accent": cat.accent,
+                  "--card-i": i,
+                } as CSSProperties
+              }
               data-category={cat.id}
               onClick={() => navigateToLibrary(cat)}
             >
-              <span className="aol-welcome__card-badge" aria-hidden>
-                {cat.iconUrl ? (
-                  <img src={cat.iconUrl} alt="" width={32} height={32} />
-                ) : (
-                  cat.badge
-                )}
-              </span>
-              <span className="aol-welcome__card-body">
-                <span className="aol-welcome__card-title">{cat.title}</span>
-                <span className="aol-welcome__card-sub">{cat.subtitle}</span>
-              </span>
-              <span className="aol-welcome__card-arrow" aria-hidden>
-                →
+              <span className="aol-welcome__card-shell">
+                <span className="aol-welcome__card-badge" aria-hidden>
+                  {cat.iconUrl ? (
+                    <img src={cat.iconUrl} alt="" width={32} height={32} />
+                  ) : (
+                    cat.badge
+                  )}
+                </span>
+                <span className="aol-welcome__card-body">
+                  <span className="aol-welcome__card-title">{cat.title}</span>
+                  <span className="aol-welcome__card-sub">{cat.subtitle}</span>
+                </span>
+                <span className="aol-welcome__card-arrow" aria-hidden>
+                  →
+                </span>
               </span>
             </button>
           ))}

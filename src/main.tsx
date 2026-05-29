@@ -9,6 +9,7 @@ import "./styles/player.css";
 import "./styles/styles-motion.css";
 import "./styles/styles-material.css";
 import "./styles/brand-player.css";
+import "./styles/brand-fx.css";
 import "./styles/styles-aol-dark.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

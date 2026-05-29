@@ -1,0 +1,337 @@
+{
+  "sourceTitle": "Искусство Жизни",
+  "sections": [
+    "Баджаны",
+    "Беседы",
+    "Серии знаний",
+    "Тексты"
+  ],
+  "folders": [
+    "Беседы",
+    "Йога сутры Патанджали",
+    "Йогасара упанишады аудио",
+    "Тексты",
+    "Call of the Valley"
+  ],
+  "tracks": [
+    {
+      "id": "4329fee7a44a6953",
+      "title": "Ahir Bhairav",
+      "fileName": "01 Ahir Bhairav.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/01 Ahir Bhairav.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "97cbb46885cd78ce",
+      "title": "Nat Bhairav",
+      "fileName": "02 Nat Bhairav.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/02 Nat Bhairav.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "9eb56582f296a2cc",
+      "title": "Piloo",
+      "fileName": "03 Piloo.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/03 Piloo.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "3557ee0de943edf9",
+      "title": "Ghara Dadra",
+      "fileName": "04 Ghara-Dadra.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/04 Ghara-Dadra.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "fee65a58551fa104",
+      "title": "Bhoop",
+      "fileName": "05 Bhoop.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/05 Bhoop.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "e3335b281d23f2d0",
+      "title": "Des",
+      "fileName": "06 Des.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/06 Des.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "87a15bc6ba8da161",
+      "title": "Pahadi",
+      "fileName": "07 Pahadi.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/07 Pahadi.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "c686b46e4d0f3c7f",
+      "title": "Dhun Mishra Kirwani",
+      "fileName": "08 Dhun-Mishra Kirwani.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/08 Dhun-Mishra Kirwani.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "613d094122e4b848",
+      "title": "Bageshwari",
+      "fileName": "09 Bageshwari.mp3",
+      "folder": "Call of the Valley",
+      "folderPath": "/Баджаны/Call of the Valley",
+      "path": "/Баджаны/Call of the Valley/09 Bageshwari.mp3",
+      "section": "Баджаны",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "3ab255f51b494b48",
+      "title": "Адхи Шанакра и возрождение знания",
+      "fileName": "01 Adi Shankara and the Revival of the Knowledge.mp3",
+      "folder": "Беседы",
+      "folderPath": "/Беседы/Беседы",
+      "path": "/Беседы/01 Adi Shankara and the Revival of the Knowledge.mp3",
+      "section": "Беседы",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "1a5b4d95d7679213",
+      "title": "Встреча Шри Шри и 300-летнего святого",
+      "fileName": "Встреча Шри Шри и 300-летнего святого.mp3",
+      "folder": "Беседы",
+      "folderPath": "/Беседы/Беседы",
+      "path": "/Беседы/Встреча Шри Шри и 300-летнего святого.mp3",
+      "section": "Беседы",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "433d01955d6c5c2f",
+      "title": "Как всегда быть счастливым",
+      "fileName": "Как всегда быть счастливым.mp4",
+      "folder": "Беседы",
+      "folderPath": "/Беседы/Беседы",
+      "path": "/Беседы/Как всегда быть счастливым.mp4",
+      "section": "Беседы",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "40e45e9a48f32432",
+      "title": "Что такое медитация (Беседа)",
+      "fileName": "Что такое медитация (Беседа).mp3",
+      "folder": "Беседы",
+      "folderPath": "/Беседы/Беседы",
+      "path": "/Беседы/Что такое медитация (Беседа).mp3",
+      "section": "Беседы",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "fe1dfd8427c9754f",
+      "title": "01 Дисциплина йоги",
+      "fileName": "01_Дисциплина йоги.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/01_Дисциплина йоги.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "d2c6db39abd24d03",
+      "title": "02 Почитание практик",
+      "fileName": "02_Почитание практик.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/02_Почитание практик.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "1d04a2c8544edeb2",
+      "title": "03 Самадхи",
+      "fileName": "03_Самадхи.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/03_Самадхи.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "44cbf84b16ef9e91",
+      "title": "04 Кто есть Бог",
+      "fileName": "04_Кто есть Бог.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/04_Кто есть Бог.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "349f769d9cbc0d3d",
+      "title": "05 Преодолевая препятствия",
+      "fileName": "05_Преодолевая препятствия.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/05_Преодолевая препятствия.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "6a807a642e566859",
+      "title": "06 Устойчивость и самадхи",
+      "fileName": "06_Устойчивость и самадхи.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/06_Устойчивость и самадхи.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "8ea97b0c78943416",
+      "title": "07 Крия йога",
+      "fileName": "07_Крия йога.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/07_Крия йога.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "56c4c9b192ea52d1",
+      "title": "08 Пелена страданий",
+      "fileName": "08_Пелена страданий.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/08_Пелена страданий.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "e26c2903a5da0430",
+      "title": "09 Устранение причин боли",
+      "fileName": "09_Устранение причин боли.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/09_Устранение причин боли.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "9237f7b16da0ea1b",
+      "title": "10 1 8 принципов йоги",
+      "fileName": "10-1_8 принципов йоги.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/10-1_8 принципов йоги.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "23fa5dcf8dca5969",
+      "title": "10 2 8 принципов йоги",
+      "fileName": "10-2_8 принципов йоги.mp4",
+      "folder": "Йога сутры Патанджали",
+      "folderPath": "/Серии знаний/Йога сутры Патанджали",
+      "path": "/Серии знаний/Йога сутры Патанджали/10-2_8 принципов йоги.mp4",
+      "section": "Серии знаний",
+      "kind": "video",
+      "mimeType": "video/mp4"
+    },
+    {
+      "id": "dcbc197fcbfb4a9c",
+      "title": "1. Смирение и рабская зависимость",
+      "fileName": "1. Смирение и рабская зависимость.mp3",
+      "folder": "Йогасара упанишады аудио",
+      "folderPath": "/Серии знаний/Йогасара упанишады аудио",
+      "path": "/Серии знаний/Йогасара упанишады аудио/1. Смирение и рабская зависимость.mp3",
+      "section": "Серии знаний",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "284f98aab937281c",
+      "title": "2. Объединение с глубиной",
+      "fileName": "2. Объединение с глубиной.mp3",
+      "folder": "Йогасара упанишады аудио",
+      "folderPath": "/Серии знаний/Йогасара упанишады аудио",
+      "path": "/Серии знаний/Йогасара упанишады аудио/2. Объединение с глубиной.mp3",
+      "section": "Серии знаний",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "3b662d7c41e8159d",
+      "title": "3. За пределами оберточной бумаги",
+      "fileName": "3. За пределами оберточной бумаги.mp3",
+      "folder": "Йогасара упанишады аудио",
+      "folderPath": "/Серии знаний/Йогасара упанишады аудио",
+      "path": "/Серии знаний/Йогасара упанишады аудио/3. За пределами оберточной бумаги.mp3",
+      "section": "Серии знаний",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "e0559bdacda06c5a",
+      "title": "4. Будьте свидетелем",
+      "fileName": "4. Будьте свидетелем.mp3",
+      "folder": "Йогасара упанишады аудио",
+      "folderPath": "/Серии знаний/Йогасара упанишады аудио",
+      "path": "/Серии знаний/Йогасара упанишады аудио/4. Будьте свидетелем.mp3",
+      "section": "Серии знаний",
+      "kind": "audio",
+      "mimeType": "audio/mpeg"
+    },
+    {
+      "id": "93878952599e3700",
+      "title": "Даттатрея. Трипура Рахасья.",
+      "fileName": "Dattatreya_TRIPURA-RAHASYa_RuLit_Me.txt",
+      "folder": "Тексты",
+      "folderPath": "/Тексты/Тексты",
+      "path": "/Тексты/Dattatreya_TRIPURA-RAHASYa_RuLit_Me.txt",
+      "section": "Тексты",
+      "kind": "text",
+      "mimeType": "text/plain"
+    }
+  ]
+}
