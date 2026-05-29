@@ -1,0 +1,51 @@
+diff --git a/node_modules/@vbonline/player/src/components/Sidebar.tsx b/node_modules/@vbonline/player/src/components/Sidebar.tsx
+index 51c95b8..64e3188 100644
+--- a/node_modules/@vbonline/player/src/components/Sidebar.tsx
++++ b/node_modules/@vbonline/player/src/components/Sidebar.tsx
+@@ -1,4 +1,4 @@
+-import { useMemo, useState, type ReactNode } from "react";
++import { useEffect, useMemo, useState, type ReactNode } from "react";
+ import type { AppSkin } from "../themes";
+ import { resolveBranding } from "../lib/branding";
+ import { getPlayerConfig } from "../playerConfig";
+@@ -164,12 +164,17 @@ function SectionBlock({
+         type="button"
+         className="nav-section-block__head"
+         onClick={() => {
++          const willExpand = !expanded;
++          onToggle();
+           if (hierarchicalNav) {
+-            onNavigateSection(section.id);
++            if (willExpand) onNavigateSection(section.id);
+             return;
+           }
+-          onToggle();
+-          onFocusSection(section.id);
++          if (willExpand) {
++            onFocusSection(section.id);
++          } else if (focusedSection === section.id) {
++            onFocusSection(null);
++          }
+         }}
+         aria-expanded={expanded}
+       >
+@@ -307,8 +312,18 @@ export function Sidebar({
+ 
+   const [expandedSections, setExpandedSections] = useState<Set<string>>(() => new Set());
+ 
++  useEffect(() => {
++    if (!focusedSection) return;
++    setExpandedSections((prev) => {
++      if (prev.has(focusedSection)) return prev;
++      const next = new Set(prev);
++      next.add(focusedSection);
++      return next;
++    });
++  }, [focusedSection]);
++
+   const isExpanded = (id: string) =>
+-    expandedSections.has(id) || focusedSection === id || sections.length <= 2;
++    expandedSections.has(id) || sections.length <= 2;
+ 
+   const toggleSection = (id: string) => {
+     setExpandedSections((prev) => {

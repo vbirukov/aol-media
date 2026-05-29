@@ -84,7 +84,6 @@
 [data-skin="aol-dark"] .media-kind-filter__btn.is-active,
 [data-skin="aol-dark"] .pill--kind.is-active,
 [data-skin="aol-dark"] .nav-item.is-active,
-[data-theme="dark"] .media-kind-filter__btn.is-active,
 [data-theme="dark"] .pill--kind.is-active,
 [data-theme="dark"] .nav-item.is-active {
   background: color-mix(in srgb, var(--aol-orange) 18%, var(--aol-dark-elevated));

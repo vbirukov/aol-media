@@ -146,7 +146,6 @@ body {
   color: var(--aol-orange);
 }
 
-.media-kind-filter__btn.is-active,
 .pill--kind.is-active,
 .nav-item.is-active {
   background: color-mix(in srgb, var(--aol-orange) 12%, var(--surface));
@@ -259,4 +258,279 @@ body {
 
 .feed-breadcrumbs__current {
   color: var(--text);
+}
+
+/* ── Sidebar: section blocks & media filter ── */
+
+.nav-section-block {
+  display: grid;
+  gap: 0.375rem;
+}
+
+.nav-section-block__head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.7rem 0.875rem;
+  text-align: left;
+  border-radius: var(--aol-radius);
+  border: 1px solid color-mix(in srgb, var(--aol-gray) 20%, var(--surface));
+  background: color-mix(in srgb, var(--surface) 92%, var(--bg));
+  color: var(--text);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  transition:
+    background 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    box-shadow 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    color 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.nav-section-block__head .nav-item__label {
+  flex: 1;
+  min-width: 0;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.nav-section-block__head .nav-sublabel {
+  flex-shrink: 0;
+  opacity: 0.72;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.nav-section-block__head:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 22%, var(--surface));
+  background: color-mix(in srgb, var(--aol-white) 96%, var(--aol-bg-soft));
+}
+
+.nav-section-block.is-section-active .nav-section-block__head {
+  border-color: color-mix(in srgb, var(--aol-orange) 30%, var(--surface));
+  background: color-mix(in srgb, var(--aol-orange) 7%, var(--aol-white));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 0 0 1px color-mix(in srgb, var(--aol-orange) 6%, transparent);
+}
+
+.nav-section-block__folders {
+  display: grid;
+  gap: 0.375rem;
+  padding-left: 0.375rem;
+}
+
+.media-kind-filter {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.3rem;
+  padding: 0.25rem;
+  border-radius: calc(var(--aol-radius) + 2px);
+  border: 1px solid color-mix(in srgb, var(--aol-gray) 18%, var(--surface));
+  background: color-mix(in srgb, var(--bg) 35%, var(--surface));
+}
+
+.media-kind-filter__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  min-height: 2.125rem;
+  padding: 0.4rem 0.625rem;
+  border-radius: calc(var(--aol-radius) - 1px);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    color 0.32s cubic-bezier(0.32, 0.72, 0, 1),
+    box-shadow 0.32s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.media-kind-filter__btn .nav-sublabel {
+  opacity: 0.65;
+  font-size: 0.6875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.media-kind-filter__btn:hover {
+  color: var(--text);
+  background: color-mix(in srgb, var(--surface) 88%, var(--aol-bg-soft));
+  border-color: color-mix(in srgb, var(--aol-gray) 16%, transparent);
+}
+
+.media-kind-filter__btn.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 11%, var(--surface));
+  border-color: color-mix(in srgb, var(--aol-orange) 28%, transparent);
+  color: var(--aol-orange);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+[data-skin="aol-dark"] .sidebar,
+[data-theme="dark"] .sidebar {
+  background-image:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--aol-dark-bg) 18%, transparent) 0%,
+      transparent 28%
+    ),
+    linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--aol-steel) 8%, transparent),
+      transparent 55%
+    );
+}
+
+[data-skin="aol-dark"] .nav-section-block__head,
+[data-theme="dark"] .nav-section-block__head {
+  border-color: color-mix(in srgb, var(--aol-gray) 14%, transparent);
+  background: color-mix(in srgb, var(--aol-dark-bg) 48%, var(--aol-dark-surface));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.045);
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .nav-section-block__head .nav-sublabel,
+[data-theme="dark"] .nav-section-block__head .nav-sublabel {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .nav-section-block__head:hover,
+[data-theme="dark"] .nav-section-block__head:hover {
+  border-color: color-mix(in srgb, var(--aol-gray) 26%, transparent);
+  background: color-mix(in srgb, var(--aol-steel) 42%, var(--aol-dark-bg));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+[data-skin="aol-dark"] .nav-section-block.is-section-active .nav-section-block__head,
+[data-theme="dark"] .nav-section-block.is-section-active .nav-section-block__head {
+  border-color: color-mix(in srgb, var(--aol-orange) 26%, transparent);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--aol-steel) 72%, var(--aol-dark-bg)),
+      color-mix(in srgb, var(--aol-dark-surface-2) 88%, var(--aol-dark-bg))
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 0 0 1px color-mix(in srgb, var(--aol-orange) 10%, transparent);
+}
+
+[data-skin="aol-dark"] .media-kind-filter,
+[data-theme="dark"] .media-kind-filter {
+  border-color: color-mix(in srgb, var(--aol-gray) 12%, transparent);
+  background: color-mix(in srgb, var(--aol-dark-bg) 62%, var(--aol-dark-surface));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+[data-skin="aol-dark"] .media-kind-filter__btn,
+[data-theme="dark"] .media-kind-filter__btn {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .media-kind-filter__btn:hover,
+[data-theme="dark"] .media-kind-filter__btn:hover {
+  color: var(--aol-dark-text);
+  background: color-mix(in srgb, var(--aol-steel) 36%, var(--aol-dark-bg));
+  border-color: color-mix(in srgb, var(--aol-gray) 18%, transparent);
+}
+
+[data-skin="aol-dark"] .media-kind-filter__btn.is-active,
+[data-theme="dark"] .media-kind-filter__btn.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 13%, var(--aol-dark-surface-2));
+  border-color: color-mix(in srgb, var(--aol-orange) 34%, transparent);
+  color: var(--aol-orange);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 0 16px color-mix(in srgb, var(--aol-orange) 10%, transparent);
+}
+
+/* ── Sidebar theme switcher: icons only ── */
+
+.sidebar-theme {
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.sidebar-theme__label {
+  display: none;
+}
+
+.theme-switcher {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--surface) 55%, var(--bg));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-switcher__btn {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.18s cubic-bezier(0.32, 0.72, 0, 1),
+    color 0.18s cubic-bezier(0.32, 0.72, 0, 1),
+    border-color 0.18s cubic-bezier(0.32, 0.72, 0, 1),
+    box-shadow 0.18s cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.theme-switcher__btn:hover {
+  color: var(--text);
+  background: color-mix(in oklab, var(--primary) 10%, transparent);
+}
+
+.theme-switcher__btn.is-active {
+  background: color-mix(in oklab, var(--primary) 18%, var(--surface));
+  border-color: color-mix(in oklab, var(--primary) 40%, transparent);
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.theme-switcher__mark {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.theme-switcher--compact .theme-switcher__label,
+.sidebar .theme-switcher__label {
+  display: none;
+}
+
+.theme-switcher--compact .theme-switcher__btn {
+  min-width: 2.25rem;
+  padding: 0.35rem;
+}
+
+[data-skin="aol-dark"] .theme-switcher,
+[data-theme="dark"] .theme-switcher {
+  background: color-mix(in oklab, var(--aol-dark-surface-2) 88%, var(--aol-dark-bg));
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .theme-switcher__btn.is-active,
+[data-theme="dark"] .theme-switcher__btn.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 20%, var(--aol-dark-elevated));
+  border-color: color-mix(in srgb, var(--aol-orange) 45%, var(--aol-dark-bg));
+  color: var(--aol-orange);
 }
