@@ -33,6 +33,16 @@
   margin-bottom: clamp(2rem, 6vw, 3rem);
 }
 
+.aol-welcome__header-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.aol-welcome__theme {
+  margin-left: auto;
+}
+
 .aol-welcome__logo {
   display: block;
   width: min(220px, 72vw);

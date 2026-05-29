@@ -1,14 +1,29 @@
-import type { CSSProperties } from "react";
+import { useEffect, type CSSProperties } from "react";
 import { HUB_CATEGORIES } from "../lib/hubCategories";
 import { navigateToLibrary } from "../lib/appRoute";
+import {
+  applyAolDocumentTheme,
+  persistAolSkin,
+  readStoredAolSkin,
+} from "../lib/aolTheme";
+import { AppearanceToggle } from "./AppearanceToggle";
 import { BrandLogo } from "./BrandLogo";
 import { ScriptHeading } from "./ScriptHeading";
 
 export function WelcomePage() {
+  useEffect(() => {
+    const skin = readStoredAolSkin();
+    applyAolDocumentTheme(skin);
+    persistAolSkin(skin);
+  }, []);
+
   return (
     <div className="aol-welcome">
       <div className="aol-welcome__inner">
         <header className="aol-welcome__header">
+          <div className="aol-welcome__header-row">
+            <AppearanceToggle className="aol-welcome__theme" />
+          </div>
           <BrandLogo className="aol-welcome__logo" />
           <h1 className="aol-welcome__title-wrap">
             <ScriptHeading>Искусство Жизни</ScriptHeading>

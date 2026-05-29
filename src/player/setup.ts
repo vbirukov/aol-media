@@ -7,8 +7,20 @@ const AOL_THEME: ThemeMeta[] = [
   {
     id: "rastaman-light",
     label: "Искусство Жизни",
-    shortLabel: "ИЖ",
-    description: "Фирменный стиль artofliving.ru",
+    shortLabel: "Свет",
+    description: "Светлая тема — брендбук artofliving.ru",
+    mark: "☀",
+    dataTheme: "rastaman-light",
+    themeColor: "#ffffff",
+  },
+  {
+    id: "aol-dark",
+    label: "Искусство Жизни",
+    shortLabel: "Тьма",
+    description: "Тёмная тема — сизо-синий и оранжевый акцент",
+    mark: "☽",
+    dataTheme: "dark",
+    themeColor: "#152028",
   },
 ];
 

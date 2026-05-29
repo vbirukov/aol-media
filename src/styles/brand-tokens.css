@@ -8,6 +8,15 @@
   --aol-text: #1a1a1a;
   --aol-text-muted: #6b6a67;
 
+  --aol-dark-bg: #152028;
+  --aol-dark-surface: #1e2d38;
+  --aol-dark-surface-2: #243544;
+  --aol-dark-elevated: #2a3e4e;
+  --aol-dark-text: #f7f6f3;
+  --aol-dark-text-muted: #acaba8;
+  --aol-dark-text-faint: #7a7976;
+  --aol-dark-border: color-mix(in srgb, var(--aol-gray) 28%, var(--aol-dark-bg));
+
   --aol-program-meditation: #7b54bf;
   --aol-program-silence: #35b3e1;
   --aol-program-yoga: #ff7b7c;

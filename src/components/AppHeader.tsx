@@ -1,5 +1,6 @@
 import type { PlayerHeaderSlotProps } from "@vbonline/player";
 import { navigateToWelcome } from "../lib/appRoute";
+import { AppearanceToggle } from "./AppearanceToggle";
 import { BrandLogo } from "./BrandLogo";
 
 export function AppHeader({
@@ -8,6 +9,8 @@ export function AppHeader({
   onInstall,
   showIosInstallHint,
   onDismissIosHint,
+  skin,
+  onSkinChange,
 }: PlayerHeaderSlotProps) {
   return (
     <header className="topbar">
@@ -33,6 +36,7 @@ export function AppHeader({
         <BrandLogo />
       </button>
       <div className="toolbar topbar-toolbar">
+        <AppearanceToggle skin={skin} onSkinChange={onSkinChange} />
         {installPrompt ? (
           <button type="button" className="ghost aol-install-btn" onClick={onInstall}>
             Установить

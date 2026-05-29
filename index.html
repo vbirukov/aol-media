@@ -25,12 +25,28 @@
     <meta property="og:locale" content="ru_RU" />
     <meta name="twitter:card" content="summary_large_image" />
     <script>
-      try {
-        document.documentElement.setAttribute("data-skin", "rastaman-light");
-        document.documentElement.setAttribute("data-theme", "rastaman-light");
-        localStorage.setItem("aol-media-skin-v1", "rastaman-light");
-        localStorage.setItem("aol-media-appearance-v1", "light");
-      } catch (e) {}
+      (function () {
+        try {
+          var skin = localStorage.getItem("aol-media-skin-v1");
+          var appearance = localStorage.getItem("aol-media-appearance-v1");
+          if (skin !== "rastaman-light" && skin !== "aol-dark") {
+            skin =
+              appearance === "dark" ||
+              (!appearance &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches)
+                ? "aol-dark"
+                : "rastaman-light";
+          }
+          var dark = skin === "aol-dark";
+          document.documentElement.setAttribute("data-skin", skin);
+          document.documentElement.setAttribute(
+            "data-theme",
+            dark ? "dark" : "rastaman-light",
+          );
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", dark ? "#152028" : "#ffffff");
+        } catch (e) {}
+      })();
     </script>
   </head>
   <body>

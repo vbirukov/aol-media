@@ -11,10 +11,7 @@
 :root,
 [data-theme="light"],
 [data-theme="rastaman-light"],
-[data-skin="rastaman-light"],
-[data-skin="rastaman"],
-[data-skin="jaipur"],
-[data-skin="moon-dub"] {
+[data-skin="rastaman-light"] {
   --bg: var(--aol-white);
   --surface: var(--aol-white);
   --surface-2: var(--aol-bg-soft);
@@ -36,26 +33,16 @@
   --shadow-lg: 0 12px 40px rgba(42, 62, 78, 0.12);
 }
 
-[data-theme="dark"],
-[data-skin="rastaman"],
-[data-skin="moon-dub"] {
-  --bg: var(--aol-white);
-  --surface: var(--aol-white);
-  --surface-2: var(--aol-bg-soft);
-  --text: var(--aol-text);
-  --text-muted: var(--aol-text-muted);
-}
-
 body {
   font-family: var(--aol-font-body);
-  background: var(--aol-white);
-  color: var(--aol-text);
+  background: var(--bg);
+  color: var(--text);
 }
 
 .sidebar {
   --sidebar-bg-image: none;
-  background-color: var(--aol-bg-soft);
-  border-right-color: color-mix(in srgb, var(--aol-gray) 30%, white);
+  background-color: var(--surface-2);
+  border-right-color: var(--border);
 }
 
 .sidebar .brand {
@@ -63,7 +50,7 @@ body {
 }
 
 .hero {
-  background: var(--aol-white) !important;
+  background: var(--surface) !important;
   background-image: none !important;
 }
 
@@ -78,19 +65,19 @@ body {
   font-family: var(--aol-font-script);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 400;
-  color: var(--aol-text) !important;
+  color: var(--text) !important;
   text-shadow: none !important;
 }
 
 .hero-author-bio,
 .hero-compact-stats,
 .mini-text {
-  color: var(--aol-text-muted) !important;
+  color: var(--text-muted) !important;
 }
 
 .topbar {
-  background: var(--aol-white);
-  border-bottom: 1px solid color-mix(in srgb, var(--aol-gray) 25%, white);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -121,6 +108,32 @@ body {
   object-fit: contain;
 }
 
+.aol-appearance-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  border-radius: 999px;
+  color: var(--text-muted);
+}
+
+.aol-appearance-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.aol-appearance-toggle__label {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .aol-appearance-toggle__label {
+    display: inline;
+  }
+}
+
 .primary,
 .icon-button.primary,
 .chip.btn-shimmer:hover {
@@ -136,9 +149,9 @@ body {
 .media-kind-filter__btn.is-active,
 .pill--kind.is-active,
 .nav-item.is-active {
-  background: color-mix(in srgb, var(--aol-orange) 12%, white);
+  background: color-mix(in srgb, var(--aol-orange) 12%, var(--surface));
   color: var(--aol-orange);
-  border-color: color-mix(in srgb, var(--aol-orange) 35%, white);
+  border-color: color-mix(in srgb, var(--aol-orange) 35%, var(--surface));
 }
 
 .card-play,
@@ -148,23 +161,23 @@ body {
 
 .player-bar,
 .video-player-bar {
-  background: var(--aol-white);
-  border-top: 1px solid color-mix(in srgb, var(--aol-gray) 25%, white);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
   box-shadow: 0 -4px 24px rgba(42, 62, 78, 0.06);
 }
 
 .card {
-  background: var(--aol-white);
-  border-color: color-mix(in srgb, var(--aol-gray) 25%, white);
+  background: var(--surface);
+  border-color: var(--border);
 }
 
 .card:hover {
-  border-color: color-mix(in srgb, var(--aol-orange) 40%, white);
+  border-color: color-mix(in srgb, var(--aol-orange) 40%, var(--surface));
 }
 
 .splash-screen {
-  background: var(--aol-white);
-  color: var(--aol-text);
+  background: var(--bg);
+  color: var(--text);
 }
 
 .aol-script-heading {
@@ -175,7 +188,7 @@ body {
   font-family: var(--aol-font-script);
   font-weight: 400;
   line-height: 1.1;
-  color: var(--aol-text);
+  color: var(--text);
 }
 
 .aol-script-heading__line {

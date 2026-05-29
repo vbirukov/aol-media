@@ -1,0 +1,262 @@
+[data-skin="aol-dark"],
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: var(--aol-dark-bg);
+  --surface: var(--aol-dark-surface);
+  --surface-2: var(--aol-dark-surface-2);
+  --surface-offset: var(--aol-dark-elevated);
+  --border: var(--aol-dark-border);
+  --divider: color-mix(in srgb, var(--aol-gray) 18%, var(--aol-dark-bg));
+  --text: var(--aol-dark-text);
+  --text-muted: var(--aol-dark-text-muted);
+  --text-faint: var(--aol-dark-text-faint);
+  --text-inverse: var(--aol-dark-bg);
+  --primary: var(--aol-orange);
+  --primary-hover: var(--aol-orange-hover);
+  --primary-hi: #ff9933;
+  --accent-teal: var(--aol-program-silence);
+  --accent-mystic: var(--aol-program-meditation);
+  --accent-ember: var(--aol-program-yoga);
+  --glow-primary: 0 0 24px rgba(255, 132, 0, 0.35);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.42);
+  --glass-surface: color-mix(in oklab, var(--aol-dark-surface) 82%, var(--aol-dark-elevated));
+  --glass-border: color-mix(in srgb, var(--aol-gray) 22%, transparent);
+}
+
+[data-skin="aol-dark"] body,
+[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-skin="aol-dark"] .aol-brand-mark,
+[data-theme="dark"] .aol-brand-mark {
+  filter: brightness(0) invert(1);
+}
+
+[data-skin="aol-dark"] .sidebar,
+[data-theme="dark"] .sidebar {
+  --sidebar-bg-image: none;
+  background-color: var(--aol-dark-surface);
+  border-right-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .hero,
+[data-theme="dark"] .hero {
+  background: var(--aol-dark-surface) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-skin="aol-dark"] .hero-author-link,
+[data-theme="dark"] .hero-author-link {
+  color: var(--aol-dark-text) !important;
+}
+
+[data-skin="aol-dark"] .hero-author-bio,
+[data-skin="aol-dark"] .hero-compact-stats,
+[data-skin="aol-dark"] .mini-text,
+[data-theme="dark"] .hero-author-bio,
+[data-theme="dark"] .hero-compact-stats,
+[data-theme="dark"] .mini-text {
+  color: var(--aol-dark-text-muted) !important;
+}
+
+[data-skin="aol-dark"] .topbar,
+[data-theme="dark"] .topbar {
+  background: var(--aol-dark-surface);
+  border-bottom-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .media-kind-filter__btn.is-active,
+[data-skin="aol-dark"] .pill--kind.is-active,
+[data-skin="aol-dark"] .nav-item.is-active,
+[data-theme="dark"] .media-kind-filter__btn.is-active,
+[data-theme="dark"] .pill--kind.is-active,
+[data-theme="dark"] .nav-item.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 18%, var(--aol-dark-elevated));
+  color: var(--aol-orange);
+  border-color: color-mix(in srgb, var(--aol-orange) 45%, var(--aol-dark-bg));
+}
+
+[data-skin="aol-dark"] .player-bar,
+[data-skin="aol-dark"] .video-player-bar,
+[data-theme="dark"] .player-bar,
+[data-theme="dark"] .video-player-bar {
+  background: var(--aol-dark-surface);
+  border-top-color: var(--aol-dark-border);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-skin="aol-dark"] .card,
+[data-theme="dark"] .card {
+  background: var(--aol-dark-surface-2);
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .card:hover,
+[data-theme="dark"] .card:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 50%, var(--aol-dark-bg));
+}
+
+[data-skin="aol-dark"] .splash-screen,
+[data-theme="dark"] .splash-screen {
+  background: var(--aol-dark-bg);
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .aol-script-heading,
+[data-theme="dark"] .aol-script-heading {
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .aol-hub-hero .aol-hub-hero__back,
+[data-theme="dark"] .aol-hub-hero .aol-hub-hero__back {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .ghost,
+[data-skin="aol-dark"] .chip,
+[data-skin="aol-dark"] .nav,
+[data-theme="dark"] .ghost,
+[data-theme="dark"] .chip,
+[data-theme="dark"] .nav {
+  color: var(--aol-dark-text);
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .ghost.round.active,
+[data-theme="dark"] .ghost.round.active {
+  background: color-mix(in oklab, var(--aol-orange) 22%, var(--aol-dark-elevated));
+  color: var(--aol-orange);
+}
+
+[data-skin="aol-dark"] .library-feed-bg,
+[data-theme="dark"] .library-feed-bg {
+  background: var(--aol-dark-bg);
+}
+
+[data-skin="aol-dark"] .library-feed-bg::after,
+[data-theme="dark"] .library-feed-bg::after {
+  background:
+    radial-gradient(
+      ellipse 70% 45% at 12% 0%,
+      color-mix(in srgb, var(--aol-steel) 55%, transparent),
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 88% 100%,
+      color-mix(in srgb, var(--aol-orange) 12%, transparent),
+      transparent 58%
+    );
+}
+
+[data-skin="aol-dark"] .modal-card,
+[data-skin="aol-dark"] .now-playing-sheet,
+[data-skin="aol-dark"] .empty,
+[data-theme="dark"] .modal-card,
+[data-theme="dark"] .now-playing-sheet,
+[data-theme="dark"] .empty {
+  background: var(--aol-dark-surface);
+  color: var(--aol-dark-text);
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .theme-switcher,
+[data-theme="dark"] .theme-switcher {
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .theme-switcher__btn.is-active,
+[data-theme="dark"] .theme-switcher__btn.is-active {
+  background: color-mix(in srgb, var(--aol-orange) 20%, var(--aol-dark-elevated));
+  color: var(--aol-orange);
+}
+
+[data-skin="aol-dark"] .timeline-track,
+[data-theme="dark"] .timeline-track {
+  background: color-mix(in srgb, var(--aol-gray) 25%, var(--aol-dark-bg));
+}
+
+[data-skin="aol-dark"] .progress-line,
+[data-theme="dark"] .progress-line {
+  background: color-mix(in srgb, var(--aol-gray) 30%, var(--aol-dark-bg));
+}
+
+[data-skin="aol-dark"] .progress-line span,
+[data-skin="aol-dark"] .timeline-fill,
+[data-theme="dark"] .progress-line span,
+[data-theme="dark"] .timeline-fill {
+  background: var(--aol-orange);
+}
+
+[data-skin="aol-dark"] .catalog-folder-heading,
+[data-theme="dark"] .catalog-folder-heading {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .text-viewer,
+[data-theme="dark"] .text-viewer {
+  background: var(--aol-dark-bg);
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .aol-welcome,
+[data-theme="dark"] .aol-welcome {
+  background: linear-gradient(
+    to bottom,
+    var(--aol-dark-bg) 0%,
+    var(--aol-dark-surface) 62%,
+    color-mix(in srgb, var(--aol-steel) 88%, var(--aol-dark-bg)) 88%,
+    color-mix(in srgb, var(--aol-orange) 35%, var(--aol-dark-bg)) 100%
+  );
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card,
+[data-theme="dark"] .aol-welcome__card {
+  background: var(--aol-dark-surface-2);
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card:hover,
+[data-theme="dark"] .aol-welcome__card:hover {
+  background: var(--aol-dark-elevated);
+  border-color: color-mix(in srgb, var(--card-accent, var(--aol-orange)) 50%, var(--aol-dark-bg));
+  box-shadow: var(--shadow-md);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card-title,
+[data-theme="dark"] .aol-welcome__card-title {
+  color: var(--aol-dark-text);
+}
+
+[data-skin="aol-dark"] .aol-welcome__all,
+[data-theme="dark"] .aol-welcome__all {
+  background: transparent;
+  color: var(--aol-orange);
+  border-color: var(--aol-orange);
+}
+
+[data-skin="aol-dark"] .aol-welcome__all:hover,
+[data-theme="dark"] .aol-welcome__all:hover {
+  background: var(--aol-orange);
+  color: var(--aol-white);
+}
+
+[data-skin="aol-dark"] .aol-welcome__band a,
+[data-theme="dark"] .aol-welcome__band a {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .aol-appearance-toggle,
+[data-theme="dark"] .aol-appearance-toggle {
+  color: var(--aol-dark-text-muted);
+}
+
+[data-skin="aol-dark"] .aol-appearance-toggle:hover,
+[data-theme="dark"] .aol-appearance-toggle:hover {
+  color: var(--aol-orange);
+}

@@ -3,9 +3,10 @@ import {
   type AppSkin,
 } from "@vbonline/player";
 
-const THEME_MARKS: Record<AppSkin, string> = {
+const THEME_MARKS: Record<string, string> = {
   rastaman: "☽",
   "rastaman-light": "☀",
+  "aol-dark": "☽",
   jaipur: "◆",
   "moon-dub": "◎",
 };
@@ -34,7 +35,7 @@ export function ThemeSwitcher({ skin, onSkinChange }: Props) {
           title={`${opt.label} — ${opt.description}`}
         >
           <span className="theme-switcher__mark" aria-hidden>
-            {THEME_MARKS[opt.id]}
+            {THEME_MARKS[opt.id] ?? opt.mark ?? "◆"}
           </span>
           <span className="theme-switcher__label">{opt.shortLabel}</span>
         </button>
