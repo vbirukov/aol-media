@@ -17,8 +17,10 @@ export type HubCategory = {
   badge: string;
   accent: string;
   iconUrl?: string;
+  /** Имя секции в catalog.json → ?section= */
   section?: string;
-  albumFolder?: string;
+  /** Прямой вход в папку (редко): ?section= + ?album= */
+  directFolder?: string;
   mediaKind?: MediaKind;
 };
 
@@ -31,7 +33,6 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#2a3e4e",
     iconUrl: "./icons/sections/talks.png",
     section: "Беседы",
-    albumFolder: "Беседы",
   },
   {
     id: "knowledge",
@@ -41,7 +42,6 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#ffc001",
     iconUrl: "./icons/sections/knowledge.png",
     section: "Серии знаний",
-    albumFolder: "Йога сутры Патанджали",
   },
   {
     id: "meditations",
@@ -60,6 +60,7 @@ export const HUB_CATEGORIES: HubCategory[] = [
     badge: "Т",
     accent: "#acaba8",
     iconUrl: "./icons/sections/texts.png",
+    section: "Тексты",
     mediaKind: "text",
   },
   {
@@ -70,7 +71,6 @@ export const HUB_CATEGORIES: HubCategory[] = [
     accent: "#ff7b7c",
     iconUrl: "./icons/sections/bhajans.png",
     section: "Баджаны",
-    albumFolder: "Call of the Valley",
     mediaKind: "audio",
   },
   {
@@ -91,14 +91,21 @@ export function hubCategoryById(id: HubCategoryId): HubCategory | undefined {
 
 export function buildLibrarySearch(category: HubCategory): string {
   const params = new URLSearchParams();
-  if (category.albumFolder) {
-    params.set("album", folderShareSlug(category.albumFolder));
+
+  if (category.section) {
+    params.set("section", folderShareSlug(category.section));
   }
+
+  if (category.directFolder) {
+    params.set("album", folderShareSlug(category.directFolder));
+  }
+
   if (category.mediaKind && category.mediaKind !== "audio") {
     params.set("kind", category.mediaKind);
   } else if (category.id === "texts") {
     params.set("kind", "text");
   }
+
   const qs = params.toString();
   return qs ? `?${qs}` : "";
 }

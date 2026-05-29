@@ -1,4 +1,7 @@
-import { folderShareSlug } from "@vbonline/player/lib/shareOg";
+import {
+  folderFromShareSlug,
+  folderShareSlug,
+} from "@vbonline/player/lib/shareOg";
 import type { HubCategory, HubCategoryId } from "./hubCategories";
 import {
   buildLibrarySearch,
@@ -20,6 +23,7 @@ export function hasDeepLink(): boolean {
   return (
     params.has("track") ||
     params.has("album") ||
+    params.has("section") ||
     params.get("catalog") === "1"
   );
 }
@@ -87,15 +91,27 @@ export function getInitialScreen(): AppScreen {
 
 export function resolveHubCategoryFromUrl(): HubCategory | undefined {
   const params = new URLSearchParams(window.location.search);
+
+  const sectionSlug = params.get("section");
+  if (sectionSlug) {
+    const sectionTitle = folderFromShareSlug(sectionSlug);
+    if (sectionTitle) {
+      const bySection = HUB_CATEGORIES.find((c) => c.section === sectionTitle);
+      if (bySection) return bySection;
+    }
+  }
+
   const kind = params.get("kind");
   if (kind === "text") return hubCategoryById("texts");
+
   const album = params.get("album");
   if (!album) return undefined;
+
   for (const cat of HUB_CATEGORIES) {
-    const candidateFolders = [cat.albumFolder, cat.section].filter(
+    const candidates = [cat.directFolder, cat.section].filter(
       (v): v is string => Boolean(v),
     );
-    for (const folder of candidateFolders) {
+    for (const folder of candidates) {
       if (album === folderShareSlug(folder)) return cat;
     }
   }

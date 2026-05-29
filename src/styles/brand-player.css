@@ -206,3 +206,57 @@ body {
 .aol-hub-hero .aol-hub-hero__back:hover {
   color: var(--aol-orange);
 }
+
+.folder-card {
+  border-color: var(--border);
+  background: var(--surface);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.folder-card:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 45%, var(--surface));
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.folder-card__title {
+  font-family: var(--aol-font-body);
+  font-weight: 500;
+  color: var(--text);
+}
+
+.folder-card__meta {
+  color: var(--text-muted);
+}
+
+.catalog-section-block__title {
+  font-family: var(--aol-font-body);
+  font-weight: 500;
+  color: var(--text);
+}
+
+.catalog-section-block__open {
+  color: var(--aol-orange);
+  font-weight: 500;
+}
+
+.catalog-section-block__open:hover {
+  color: var(--aol-orange-hover);
+}
+
+.feed-breadcrumbs__back,
+.feed-breadcrumbs__trail button {
+  color: var(--text-muted);
+}
+
+.feed-breadcrumbs__back:hover,
+.feed-breadcrumbs__trail button:hover {
+  color: var(--aol-orange);
+}
+
+.feed-breadcrumbs__current {
+  color: var(--text);
+}

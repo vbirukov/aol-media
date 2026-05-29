@@ -260,3 +260,20 @@
 [data-theme="dark"] .aol-appearance-toggle:hover {
   color: var(--aol-orange);
 }
+
+[data-skin="aol-dark"] .folder-card,
+[data-theme="dark"] .folder-card {
+  background: var(--aol-dark-surface-2);
+  border-color: var(--aol-dark-border);
+}
+
+[data-skin="aol-dark"] .folder-card:hover,
+[data-theme="dark"] .folder-card:hover {
+  border-color: color-mix(in srgb, var(--aol-orange) 45%, var(--aol-dark-bg));
+  box-shadow: var(--shadow-md);
+}
+
+[data-skin="aol-dark"] .catalog-section-block__count,
+[data-theme="dark"] .catalog-section-block__count {
+  color: var(--aol-dark-text-muted);
+}

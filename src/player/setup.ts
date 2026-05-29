@@ -54,4 +54,9 @@ setPlayerConfig({
     loaded: false,
   }),
   themeOptions: AOL_THEME,
+  catalogNavigation: {
+    mode: "hierarchical",
+    catalogRoot: "sections",
+    sectionView: "folder-cards",
+  },
 });
