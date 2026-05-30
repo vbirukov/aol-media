@@ -584,10 +584,21 @@
   );
 }
 
-/* talks accent (#2a3e4e) совпадает с тёмным фоном карточки */
-[data-skin="aol-dark"] .aol-welcome__card[data-category="talks"],
-[data-theme="dark"] .aol-welcome__card[data-category="talks"] {
-  --card-accent: color-mix(in srgb, var(--aol-steel) 32%, var(--aol-dark-text));
+/* talks accent (#2a3e4e) сливается с фоном — стрелку выводим отдельно */
+[data-skin="aol-dark"] .aol-welcome__card[data-category="talks"] .aol-welcome__card-arrow,
+[data-theme="dark"] .aol-welcome__card[data-category="talks"] .aol-welcome__card-arrow {
+  color: var(--aol-orange);
+  font-weight: 600;
+  font-size: 1.1875rem;
+  background: color-mix(in srgb, var(--aol-orange) 28%, var(--aol-dark-elevated));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--aol-orange) 55%, transparent);
+}
+
+[data-skin="aol-dark"] .aol-welcome__card[data-category="talks"]:hover .aol-welcome__card-arrow,
+[data-theme="dark"] .aol-welcome__card[data-category="talks"]:hover .aol-welcome__card-arrow {
+  color: var(--aol-white);
+  background: var(--aol-orange);
+  box-shadow: none;
 }
 
 [data-skin="aol-dark"] .aol-welcome__all::after,
