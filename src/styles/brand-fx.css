@@ -584,6 +584,12 @@
   );
 }
 
+/* talks accent (#2a3e4e) совпадает с тёмным фоном карточки */
+[data-skin="aol-dark"] .aol-welcome__card[data-category="talks"],
+[data-theme="dark"] .aol-welcome__card[data-category="talks"] {
+  --card-accent: color-mix(in srgb, var(--aol-steel) 32%, var(--aol-dark-text));
+}
+
 [data-skin="aol-dark"] .aol-welcome__all::after,
 [data-theme="dark"] .aol-welcome__all::after {
   opacity: 0.35;

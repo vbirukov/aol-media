@@ -253,13 +253,13 @@
 .aol-welcome__card-title {
   font-weight: 500;
   font-size: 1.0625rem;
-  color: var(--aol-text);
+  color: var(--text);
 }
 
 .aol-welcome__card-sub {
   font-size: 0.875rem;
   font-weight: 300;
-  color: var(--aol-text-muted);
+  color: var(--text-muted);
   line-height: 1.4;
 }
 
